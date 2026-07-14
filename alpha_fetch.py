@@ -1,7 +1,12 @@
 import requests
 import pandas as pd
 import time
-API_KEY = "U53WNF0XZW1EIPFO"
+from dotenv import load_dotenv
+import os
+
+load_dotenv()
+
+API_KEY = os.getenv("ALPHA_VANTAGE_API_KEY")
 BASE_URL = "https://www.alphavantage.co/query"
 
 SYMBOLS = [
